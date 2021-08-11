@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizzare Car Dealership</title>
+    <link rel="stylesheet" href="./styles/landing.css">
+</head>
+<body>
+    <div class="landing-container">
+        <div class="landingheading">
+            <span>Bizzare Car Dealership</span>
+        </div>
+        <div class="loginform-container">
+            <form class="loginform" method="POST">
+                <h3>Login</h3>
+                <table>
+                    <tr>
+                        <td><input class="linputtext" id="lusername" type ="text" name ="username" placeholder="Username"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="linputtext" id="lpassword" type ="password" name ="password" placeholder="Password"></td>
+                    </tr>
+                    <tr>
+                        <td><button class="linputsubmit" onclick='event.preventDefault(), login()'>Log In</button></td>
+                    </tr>
+                    <tr id="noaccount">
+                        <td>
+                            <p>Not registered? Sign up <span class="clickreg" onclick="register()">here</span></p>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div class="signupcontainer">
+        <div>
+            <i class="fas fa-times exiticon" onclick="register()"></i>
+            <div class="signupform-container">
+                <form class="signupform" action="https://murmuring-sands-24102.herokuapp.com/user-registration/" method="POST">
+                    <h3>Sign Up</h3>
+                    <table>
+                        <tr>
+                            <td><input class="linputtext" id="remail" type ="text" name ="email" placeholder="Email"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="linputtext" id="rfirstname" type ="text" name ="first_name" placeholder="First Name"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="linputtext" id="rlastname" type ="text" name ="last_name" placeholder="Last Name"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="linputtext" id="raddress" type ="text" name ="address" placeholder="Address"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="linputtext" id="rusername" type ="text" name ="username" placeholder="Username"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="linputtext" id="rpassword" type ="password" name ="password" placeholder="Password"></td>
+                        </tr>
+                        <tr>
+                            <td><button class="linputsubmit">Sign Up</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+    <script src="https://kit.fontawesome.com/1e2396cf96.js" crossorigin="anonymous"></script>
+</body>
+</html>
