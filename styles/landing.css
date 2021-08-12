@@ -7,12 +7,13 @@
 }
 
 body{
-    background-color: rgb(193, 228, 230);
+    background-image: url(/images/side.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
     overflow-y: hidden;
     position: relative;
-    background-image: url(/images/coupe.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    font-family: sans-serif;
 }
 
 .landing-container{
@@ -34,10 +35,9 @@ body{
     width: 100%;
     font-size: 20px;
     text-align: center;
-    background-color: #008000;
+    background-color: transparent;
     color: white;
 }
-
 
 .loginform-container, .signupform-container{
     display: flex;
@@ -46,7 +46,6 @@ body{
     height: 100%;
     width: 100%;
 }
-
 
 .loginform, .signupform{
     height: 500px;
@@ -139,9 +138,7 @@ body{
 
 .signupform{
     height: 600px;
-    background-image: url(/images/704363.jpg);
 }
-
 
 .signupcontainer div{
     width: 100%;

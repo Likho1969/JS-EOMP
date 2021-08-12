@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jost&family=Krona+One&family=Poller+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(193, 228, 230);
+    position: relative;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 10vh 1fr;
+    grid-template-columns: 20vw 1fr;
+}
+
+.heading{
+    display: grid;
+    place-items: center;
+    font-family: 'Krona One';
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    grid-row: 1;
+    grid-column: 1/3;
+}
+
+.filterbar{
+    position: sticky;
+    left: 0;
+    grid-row: 2;
+    grid-column: 1;
+    background-color: red;
+    height: 90vh;
+    width: 20vw;
+}
+
+.productcontents{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.contentheading{
+    font-family: 'Krona One';
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.product{
+    display: flex;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 20px 0;
+    padding: 20px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Jost';
+}
+
+.product img{
+    width: 10%;
+    height: 10%;
+    margin-right: 20px;
+}
+
+.productdesc{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.producttype{
+    justify-self: flex-end;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.newproduct{
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 50px;
+    width: 150px;
+    display: grid;
+    place-items: center;
+    border: 1px solid black;
+    font-family: 'Jost';
+    background-color: white;
+    transition: 0.5s ease;
+}
+
+.newproduct:hover{
+    background-color: black;
+    color: white;
+}
+
+.addprocontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    z-index: 10;
+    transition: 1s ease;
+}
+
+.addproform{
+    height: 600px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5%;
+    background-color: white;
+}
+
+.addproform h3{
+    font-family: 'Krona One';
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.addproform table{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.addproform table tbody{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.addproform table tr{
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.linputtext{
+    background-color: white;
+    border: 1px solid black;
+    justify-self: center;
+    height: 50px;
+    width: 300px;
+}
+
+.linputtext::placeholder{
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.linputsubmit{
+    background-color: white;
+    border: 1px solid black;
+    justify-self: center;
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+    transition: 0.5s ease;
+}
+
+.linputsubmit:hover{
+    background-color: black;
+    color: white;
+}
+
+
+.addprocontainer div{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    display: grid;
+    place-items: center;
+    z-index: 10;
+}
+
+.addprocontainer.active{
+    top: 0;
+    left: 0;
+}
+
+.exiticon{
+    position: fixed;
+    top: 1.5vh;
+    right: 1.5vw;
+    font-size: 30px;
+    color: white;
+    z-index: 11;
+}
+
+.imageup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
