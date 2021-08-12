@@ -1,7 +1,7 @@
 const mystorage = window.localStorage
 
 function login(){
-    fetch('https://flask-eomp-jesse.herokuapp.com/auth', {
+    fetch('https://murmuring-sands-24102.herokuapp.com/auth', {
     method: "POST",
     body: JSON.stringify({
         'username': document.getElementById("lusername").value,
@@ -27,7 +27,7 @@ function register(){
 }
 
 
-fetch('https://flask-eomp-jesse.herokuapp.com/viewcatalogue')
+fetch('https://murmuring-sands-24102.herokuapp.com/show-Vehicle')
 .then(response => response.json())
 .then(data => {
     console.log(data)
@@ -72,7 +72,7 @@ function addtocatalogue(){
     //         "product_price": document.getElementById("aprice").value,
     //         "product_image": document.getElementById("aimage").files[0],}
     // )
-    fetch(`https://flask-eomp-jesse.herokuapp.com/addtocatalogue/`, {
+    fetch(`https://murmuring-sands-24102.herokuapp.com/edit-car/1`, {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json',
