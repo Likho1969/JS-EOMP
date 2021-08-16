@@ -1,73 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bizarre Car Dealership</title>
-    <link rel="stylesheet" href="./styles/landing.css">
-</head>
-<body>
-    <div class="landing-container">
-        <div class="landingheading">
-            <span>Welcome Bizarre Car Dealership</span>
-        </div>
-        <div class="loginform-container">
-            <form class="loginform" method="POST">
-                <h3>Login</h3>
-                <table>
-                    <tr>
-                        <td><input class="linputtext" id="lusername" type ="text" name ="username" placeholder="Username"></td>
-                    </tr>
-                    <tr>
-                        <td><input class="linputtext" id="lpassword" type ="password" name ="password" placeholder="Password"></td>
-                    </tr>
-                    <tr>
-                        <td><button class="linputsubmit" onclick='event.preventDefault(), login()'>Log In</button></td>
-                    </tr>
-                    <tr id="noaccount">
-                        <td>
-                            <p>Not registered? Sign up <span class="clickreg" onclick="register()">here</span></p>
-                        </td>
-                    </tr>
-                </table>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Car Dealership</title>
+    <link rel="stylesheet" href="./styles/login.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./JavaScript/Jscript.js"></script>
+  </head>
+  <body>
+    <!-- landing page Section -->
+    <section class="landing" id="section">
+      <div class="outer-form">
+        <h1 class="heading">Dynamic Car Dealership.</h1>
+      </div>
+      <div class="inner-form">
+        <h2>Please Enter Details</h2>
+        <div class="inner-container1">
+          <img
+            class="car-image"
+            src="/inside.jpeg"
+            alt=""
+          />
+          <button
+            onclick="document.getElementById('id01').style.display='block'"
+            style="width: auto"
+          >
+            Login
+          </button>
+
+          <div id="id01" class="modal">
+            <form class="modal-content animate" action="https://vast-escarpment-76787.herokuapp.com/auth" method="POST">
+              <div class="imgcontainer">
+                <span
+                  onclick="document.getElementById('id01').style.display='none'"
+                  class="close"
+                  title="Close Modal"
+                  >&times;</span
+                >
+                <img
+                  src="https://cdn.pixabay.com/photo/2013/11/28/11/30/man-220258_640.jpg"
+                  alt="Avatar"
+                  class="avatar"
+                />
+              </div>
+
+              <div class="container center">
+                <label for="username"><b>Username</b></label>
+                <input
+                  type="text"
+                  placeholder="Enter Username"
+                  name="username"
+                  required
+                />
+
+                <label for="password"><b>Password</b></label>
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  name="password"
+                  required
+                />
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" />
+                  Remember me
+                </label>
+                <div class="container">
+                  <button type="submit">Login</button>
+
+                  <button
+                    type="button"
+                    onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
             </form>
+          </div>
+          <!----------------- Sign-up page ----------->
+
+          <button
+            onclick="document.getElementById('id02').style.display='block'"
+            style="width: auto"
+          >
+            Sign Up
+          </button>
         </div>
-    </div>
-    <div class="signupcontainer">
-        <div>
-            <i class="fas fa-times exiticon" onclick="register()"></i>
-            <div class="signupform-container">
-                <form class="signupform" action="https://flask-eomp-jesse.herokuapp.com/user-registration/" method="POST">
-                    <h3>Sign Up</h3>
-                    <table>
-                        <tr>
-                            <td><input class="linputtext" id="remail" type ="text" name ="email" placeholder="Email"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="linputtext" id="rfirstname" type ="text" name ="first_name" placeholder="First Name"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="linputtext" id="rlastname" type ="text" name ="last_name" placeholder="Last Name"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="linputtext" id="raddress" type ="text" name ="address" placeholder="Address"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="linputtext" id="rusername" type ="text" name ="username" placeholder="Username"></td>
-                        </tr>
-                        <tr>
-                            <td><input class="linputtext" id="rpassword" type ="password" name ="password" placeholder="Password"></td>
-                        </tr>
-                        <tr>
-                            <td><button class="linputsubmit">Sign Up</button></td>
-                        </tr>
-                    </table>
-                </form>
+
+        <div id="id02" class="modal">
+          <span
+            onclick="document.getElementById('id02').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <form
+            class="modal-content animate"
+            action="https://vast-escarpment-76787.herokuapp.com/user-registration"
+            method="POST"
+          >
+            <div class="container">
+              <h1 class="signup">Sign Up</h1>
+              <p>To create an account, Please your details.</p>
+              <hr />
+              <div class="center">
+                <label for="firstname"><b>firstname</b></label>
+                <input
+                  type="text"
+                  placeholder="Enter name"
+                  name="firstname"
+                  required
+                />
+
+                <label for="lastname"><b>lastname</b></label>
+                <input
+                  type="text"
+                  placeholder="Enter lastname"
+                  name="lastname"
+                  required
+                />
+
+                <label for="Contact"><b>Contact</b></label>
+                <input
+                  type="text"
+                  placeholder="Eg.075 239 2372"
+                  name="contact"
+                  required
+                />
+                <label for="lastname"><b>Password</b></label>
+                <input
+                  type="password"
+                  placeholder="Enter password"
+                  name="password"
+                  required
+                />
+                <label for="username"><b>username</b></label>
+                <input
+                  type="text"
+                  placeholder="Enter username"
+                  name="username"
+                  required
+                />
+                <label for="email"><b>email</b></label>
+                <input
+                  type="text"
+                  placeholder="example2@gmail.com"
+                  name="email"
+                  required
+                />
+
+                <label>
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    name="remember"
+                    style="margin-bottom: 15px"
+                  />
+                  Remember me
+                </label>
+                <div class="clearfix">
+                  <button type="submit" class="signupbtn">Sign Up</button>
+                  <button
+                    type="button"
+                    onclick="document.getElementById('id02').style.display='none'"
+                    class="cancelbtn"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
             </div>
+          </form>
         </div>
-    </div>
-    <script src="./script.js"></script>
-    <script src="https://kit.fontawesome.com/1e2396cf96.js" crossorigin="anonymous"></script>
-</body>
+      </div>
+    </section>
+  </body>
 </html>

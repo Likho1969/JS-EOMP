@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner-form {
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 17.0px );
+  -webkit-backdrop-filter: blur( 17.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.inner-container1 {
+  display: flex;
+  flex-direction: column;
+}
+.car-image {
+  width: 300px;
+  margin-left: 40px;
+  border-radius: 10%;
+}
+h2 {
+  color: #439a86;
+  padding-left: 80px;
+  font-size: 30px;
+}
+.heading {
+  font-size: 3rem;
+  color: white;
+}
+
+#section.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  text-align-last: center;
+}
