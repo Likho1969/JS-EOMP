@@ -53,12 +53,12 @@ function createDealership(){
             'Authorization' : `jwt ${mystorage.getItem('jwt-token')}`
         },
         body: JSON.stringify({
-            "product_id": document.getElementById("aid").value,
-            "product_name": document.getElementById("aname").value,
-            "product_type": document.getElementById("atype").value,
-            "product_quantity": document.getElementById("aquantity").value,
-            "product_price": document.getElementById("aprice").value,
-            "product_image": document.querySelector('.imageup').src,
+            "car_name": document.getElementById("aid").value,
+            "car_brand": document.getElementById("aname").value,
+            "car_price": document.getElementById("atype").value,
+            "car_type": document.getElementById("aquantity").value,
+            "car_year": document.getElementById("aprice").value,
+            "car_image": document.querySelector('.imageup').src,
         }),
     }).then(response => response.json).then(data => {
         console.log(data);

@@ -12,6 +12,7 @@ body{
     background-size: cover;
     height: 100vh;
     position: relative;
+    font-family: sans-serif;
 }
 
 .container{
@@ -23,10 +24,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Krona One';
     height: 100%;
     width: 100%;
-    font-size: 20px;
+    font-size: 40px;
     background-color: blue;
     color: white;
     grid-row: 1;
@@ -39,7 +39,6 @@ body{
 .headingnav{
     display: flex;
     font-size: 15px;
-    font-family: 'Jost';
     padding-right: 2vw;
 }
 

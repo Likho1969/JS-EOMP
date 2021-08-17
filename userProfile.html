@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
+    <title>User Profile - Dynamic Car Dealership</title>
     <link rel="stylesheet" href="./styles/userProfile.css">
 </head>
 <body>
@@ -21,13 +21,16 @@
                     <td><input class="einputtext" id="elastn" type ="text" name ="last_name" placeholder="Last Name"></td>
                 </tr>
                 <tr>
-                    <td><input class="einputtext" id="eaddress" type ="text" name ="address" placeholder="Address"></td>
+                    <td><input class="einputtext" id="econtact" type ="text" name ="contact" placeholder="Contact"></td>
                 </tr>
                 <tr>
                     <td><input class="einputtext" id="eusername" type ="text" name ="username" placeholder="Username"></td>
                 </tr>
                 <tr>
                     <td><input class="einputtext" id="epassword" type ="text" name ="password" placeholder="Password"></td>
+                </tr>
+                <tr>
+                    <td><input class="einputtext" id="eaddress" type ="text" name ="address" placeholder="Address"></td>
                 </tr>
                 <tr>
                     <td><button class="einputsubmit" onclick="edituser()">Submit Changes</button></td>
@@ -41,22 +44,22 @@
             <h3>Edit Item</h3>
             <table>
                 <tr>
-                    <td><input class="einputtext" id="iproductid" type ="text" name ="product_id" placeholder="Product ID"></td>
+                    <td><input class="einputtext" id="iproductid" type ="text" name ="car_name" placeholder="Car Name"></td>
                 </tr>
                 <tr>
-                    <td><input class="einputtext" id="iproductname" type ="text" name ="product_name" placeholder="Product Name"></td>
+                    <td><input class="einputtext" id="iproductname" type ="text" name ="car_brand" placeholder="Car Brand"></td>
                 </tr>
                 <tr>
-                    <td><input class="einputtext" id="iproducttype" type ="text" name ="product_type" placeholder="Type" required></td>
+                    <td><input class="einputtext" id="iproducttype" type ="text" name ="car_price" placeholder="Car Price in Rands" required></td>
                 </tr>
                 <tr>
-                    <td><input class="einputtext" id="iproductquantity" type ="text" name ="product_quantity" placeholder="Quantity" required></td>
+                    <td><input class="einputtext" id="iproductquantity" type ="text" name ="car_type" placeholder="Car Type" required></td>
                 </tr>
                 <tr>
-                    <td><input class="einputtext" id="iproductprice" type ="text" name ="product_price" placeholder="Price" required></td>
+                    <td><input class="einputtext" id="iproductprice" type ="text" name ="car_year" placeholder="Car Year" required></td>
                 </tr>
                 <tr>
-                    <td><input class="einputtext" id="iproductimage" type ="file" name ="product_image" placeholder=""></td>
+                    <td><input class="einputtext" id="iproductimage" type ="file" name ="car_image" placeholder=""></td>
                 </tr>
                 <tr>
                     <td><img src="" alt="" class="previewimage"></td>
@@ -83,11 +86,11 @@
     </div>
     <div class="container">
         <div class="heading">
-            <span>Big Business</span>
+            <span>Dynamic Car Dealership</span>
             <div class="headingnav">
                 <div id="Home">Home</div>
-                <div id="View-Profile">View Profile</div>
-                <div id="View-Cart">View Cart</div>
+                <div id="View-Profile">User Profile</div>
+                <div id="View-Cart">User Cart</div>
             </div>
         </div>
         <div class="profilecontainer">
@@ -101,7 +104,7 @@
                 </div>
             </div>
             <div class="myproductscontainer">
-                <h1 class="productsheading">Products</h1>
+                <h1 class="productsheading">Cars</h1>
                 <div class="myproducts"></div>
             </div>
         </div>

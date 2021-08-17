@@ -38,20 +38,25 @@ fetch(`https://murmuring-sands-24102.herokuapp.com/user-profile/6/${username}`)
                 <span>Last Name</span>
                 <span>${detail[2]}</span>
             </div>
-            <div class='address'>
-                <span>Address</span>
+            <div class='contact'>
+                <span>Contact</span>
                 <span>${detail[3]}</span>
             </div>
             <div class='username'>
                 <span>Username</span>
                 <span>${detail[4]}</span>
             </div>
+            <div class='address'>
+                <span>Address</span>
+                <span>${detail[5]}</span>
+            </div>
             ` ;
             document.getElementById('efirstn').value = detail[1];
             document.getElementById('elastn').value = detail[2];
-            document.getElementById('eaddress').value = detail[3];
+            document.getElementById('econtact').value = detail[3];
             document.getElementById('eusername').value = detail[4];
             document.getElementById('epassword').value = detail[5];
+            document.getElementById('eaddress').value = detail[6];
             useremail = detail[0];
 
             // fetch(`https://murmuring-sands-24102.herokuapp.com/myproducts/${detail[0]}/`, {
@@ -179,13 +184,13 @@ function edititem() {
             'Authorization' : `jwt ${mystorage.getItem('jwt-token')}`
         },
         body: JSON.stringify({
-            "product_id": document.querySelector('#iproductid').value,
-            "product_name": document.querySelector('#iproductname').value,
-            "product_type": document.querySelector('#iproducttype').value,
-            "product_quantity": document.querySelector('#iproductquantity').value,
-            "product_price": document.querySelector('#iproductprice').value,
+            "car_name": document.querySelector('#iproductid').value,
+            "car_brand": document.querySelector('#iproductname').value,
+            "car_price": document.querySelector('#iproducttype').value,
+            "car_type": document.querySelector('#iproductquantity').value,
+            "car_year": document.querySelector('#iproductprice').value,
             "email": document.querySelector('.emailval').innerHTML,
-            "product_image": productimage,
+            "car_image": productimage,
         }),
     }).then(response => response.json).then(data => {
         console.log(data);
