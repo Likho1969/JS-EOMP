@@ -7,11 +7,11 @@ let tocart = document.getElementById('View-Cart').addEventListener('click', redi
 
 function redirectTo (e) {
     if (e.target.id == 'Home'){
-        window.location.href = './products.html'
+        window.location.href = './cars.html'
     }if(e.target.id == 'View-Profile'){
-        window.location.href = './profile.html'
+        window.location.href = './userProfile.html'
     }if (e.target.id == 'View-Cart') {
-        window.location.href = './cart.html'
+        window.location.href = './userCart.html'
     }
 }
 
@@ -54,41 +54,41 @@ fetch(`https://murmuring-sands-24102.herokuapp.com/user-profile/6/${username}`)
             document.getElementById('epassword').value = detail[5];
             useremail = detail[0];
 
-            fetch(`https://murmuring-sands-24102.herokuapp.com/myproducts/${detail[0]}/`, {
-                method: "get",
-                headers: {
-                    'Authorization' : `jwt ${mystorage.getItem('jwt-token')}`
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                if (data['data'] == ''){
-                    document.querySelector('.myproducts').innerHTML = `<div class='noitems'> You have not added any products </div>`
-                }else{
-                    data['data'].forEach((product) => {
-                        document.querySelector('.myproducts').innerHTML += `
-                        <div class='product ${product[0]}'>
-                            <img src='${product[5]}' alt='product img'></img>
-                            <div class='productdesc'>
-                                <h2 class='productprice'>R${product[4]}</h2>
-                                <h3 class='productheading'>${product[1]}</h3>
-                                <h4 class='producttype'>${product[2]}</h4>
-                            </div>
-                            <div class="edt-delcontainer">
-                                <div class="editbutton ${product[0]}">
-                                    <span>Edit Item</span>
-                                </div>
-                                <div class="delbutton ${product[0]}">
-                                    <span>Delete Item</span>
-                                </div>
-                            </div>
-                        </div>`  ;
-                        editeventadd()
-                        deleteeventadd()
-                    })
-                }
-            })
+            // fetch(`https://murmuring-sands-24102.herokuapp.com/myproducts/${detail[0]}/`, {
+                // method: "get",
+                // headers: {
+                    // 'Authorization' : `jwt ${mystorage.getItem('jwt-token')}`
+                // }
+            // })
+            // .then(response => response.json())
+            // .then(data => {
+                // console.log(data)
+                // if (data['data'] == ''){
+                    // document.querySelector('.myproducts').innerHTML = `<div class='noitems'> You have not added any products </div>`
+                // }else{
+                    // data['data'].forEach((product) => {
+                        // document.querySelector('.myproducts').innerHTML += `
+                        // <div class='product ${product[0]}'>
+                            // <img src='${product[5]}' alt='product img'></img>
+                            // <div class='productdesc'>
+                                // <h2 class='productprice'>R${product[4]}</h2>
+                                // <h3 class='productheading'>${product[1]}</h3>
+                                // <h4 class='producttype'>${product[2]}</h4>
+                            // </div>
+                            // <div class="edt-delcontainer">
+                                // <div class="editbutton ${product[0]}">
+                                    // <span>Edit Item</span>
+                                // </div>
+                                // <div class="delbutton ${product[0]}">
+                                    // <span>Delete Item</span>
+                                // </div>
+                            // </div>
+                        // </div>`  ;
+                        // editeventadd()
+                        // deleteeventadd()
+                    // })
+                // }
+            // })
         });
     }
 })

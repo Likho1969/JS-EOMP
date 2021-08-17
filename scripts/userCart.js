@@ -6,11 +6,11 @@ let tocart = document.getElementById('View-Cart').addEventListener('click', redi
 
 function redirectTo (e) {
     if (e.target.id == 'Home'){
-        window.location.href = './products.html'
+        window.location.href = './cars.html'
     }if(e.target.id == 'View-Profile'){
-        window.location.href = './profile.html'
+        window.location.href = './userProfile.html'
     }if (e.target.id == 'View-Cart') {
-        window.location.href = './cart.html'
+        window.location.href = './userCart.html'
     }
 }
 

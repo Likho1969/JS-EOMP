@@ -26,7 +26,7 @@ fetch('https://murmuring-sands-24102.herokuapp.com/show-Vehicle')
     });
 })
 
-function addproduct(){
+function addCar(){
     document.querySelector('.addprocontainer').classList.toggle('active')
 }
 
@@ -45,8 +45,8 @@ function previewFile() {
     }
   }
 
-function addtocatalogue(){
-    fetch(`https://murmuring-sands-24102.herokuapp.com/addtocatalogue/`, {
+function createDealership(){
+    fetch(`https://murmuring-sands-24102.herokuapp.com/create-dealership`, {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json',
@@ -71,11 +71,11 @@ let tocart = document.getElementById('View-Cart').addEventListener('click', redi
 
 function redirectTo (e) {
     if (e.target.id == 'Home'){
-        window.location.href = './products.html'
+        window.location.href = './cars.html'
     }if(e.target.id == 'View-Profile'){
-        window.location.href = './profile.html'
+        window.location.href = './userProfile.html'
     }if (e.target.id == 'View-Cart') {
-        window.location.href = './cart.html'
+        window.location.href = './userCart.html'
     }
 }
 
@@ -88,7 +88,7 @@ if (mystorage["cart"]) {
     // let object = {}
     // productid = e.target.classList[0]
     // console.log(productid)
-    // fetch(`https://murmuring-sands-24102.herokuapp.com/select_item/${productid}`, {
+    // fetch(`https://murmuring-sands-24102.herokuapp.com/opt-vehicle/${productid}`, {
         // headers: {
             // 'Authorization': `jwt ${mystorage.getItem('jwt-token')}`
         // }

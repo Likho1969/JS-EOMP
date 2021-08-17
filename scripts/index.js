@@ -17,8 +17,8 @@ function login(){
         }else{
             console.log(data['access_token'])
             mystorage.setItem('jwt-token', data['access_token'])
-            mystorage.setItem('username', document.getElementById('lusername').value)
-            window.location.href = "./products.html"
+            mystorage.setItem('username', document.getElementById('username').value)
+            window.location.href = "./cars.html"
         }
     });
 }

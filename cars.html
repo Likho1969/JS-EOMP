@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Car Dealership</title>
-    <link rel="stylesheet" href="./styles/products.css">
+    <link rel="stylesheet" href="./styles/cars.css">
 </head>
 <body>
     <div class="addprocontainer">
         <div>
-            <i class="fas fa-times exiticon" onclick="addproduct()"></i>
+            <i class="fas fa-times exiticon" onclick="addCar()"></i>
             <div class="addproform-container">
                 <form class="addproform" method="POST">
                     <h3>Add New Car</h3>
@@ -34,7 +34,7 @@
                             <td><input class="linputtext" id="aimage" type ="file" name ="product_image" placeholder="Upload Image" onchange="previewFile()"></td>
                         </tr>
                         <tr>
-                            <td><button onclick="event.preventDefault(), addtocatalogue()" class="linputsubmit">Add product</button></td>
+                            <td><button onclick="event.preventDefault(), createDealership()" class="linputsubmit">Add product</button></td>
                         </tr>
                     </table>
                 </form>
@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="productscontent">
-            <div class="newproduct" onclick="addproduct()">
+            <div class="newproduct" onclick="addCar()">
                 <span>
                     Add New Product
                 </span> 
@@ -62,7 +62,7 @@
         </div>
     </div>
     <img src="" alt="image-preview" class="imageup">
-    <script src="./scripts/products.js"></script>
+    <script src="./scripts/cars.js"></script>
     <script src="https://kit.fontawesome.com/1e2396cf96.js" crossorigin="anonymous"></script>
 </body>
 </html>
