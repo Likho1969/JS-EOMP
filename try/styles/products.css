@@ -1,0 +1,264 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jost&family=Krona+One&family=Poller+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(/front.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 10vh 1fr;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    background-color: blue;
+    color: white;
+    grid-row: 1;
+}
+
+.heading span{
+    padding-left: 20px;
+}
+
+.headingnav{
+    display: flex;
+    font-size: 15px;
+    font-family: 'Jost';
+    padding-right: 2vw;
+}
+
+.headingnav div{
+    padding: 10px 20px;
+    margin-left: 20px;
+    transition: 0.5s ease;
+}
+
+.headingnav div:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.productcontents{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.contentheading{
+    color: white;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.product{
+    display: flex;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 20px 0;
+    padding: 20px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.product img{
+    width: 10%;
+    height: 10%;
+    margin-right: 20px;
+    align-self: center;
+}
+
+.productdesc{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.producttype{
+    justify-self: flex-end;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.newproduct{
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 50px;
+    width: 150px;
+    display: grid;
+    place-items: center;
+    border: 1px solid blue;
+    background-color: red;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.newproduct:hover{
+    background-color: white;
+    color: black;
+}
+
+.addprocontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    z-index: 10;
+    transition: 1s ease;
+}
+
+.addproform{
+    height: 600px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5%;
+    background: rgba( 255, 255, 255, 0.40 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 14.5px );
+    -webkit-backdrop-filter: blur( 14.5px );
+    border-radius: 40px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.addproform h3{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.addproform table{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.addproform table tbody{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.addproform table tr{
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.linputtext{
+    background: rgba(240, 242, 245, 0.4);
+    border: 1px solid black;
+    justify-self: center;
+    height: 50px;
+    width: 300px;
+}
+
+.linputtext::placeholder{
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.linputsubmit{
+    background-color: red;
+    border: 1px solid blue;
+    color: white;
+    justify-self: center;
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+    transition: 0.5s ease;
+}
+
+.linputsubmit:hover{
+    background-color: blue;
+    border: 1xp solid red;
+    color: white;
+}
+
+
+.addprocontainer div{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    display: grid;
+    place-items: center;
+    z-index: 10;
+}
+
+.addprocontainer.active{
+    top: 0;
+    left: 0;
+}
+
+.exiticon{
+    position: fixed;
+    top: 1.5vh;
+    right: 1.5vw;
+    font-size: 30px;
+    color: white;
+    z-index: 11;
+}
+
+.imageup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.addtocartcontainer{
+    position: absolute;
+    text-align: end;
+    right: 50px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.addtocartcontainer div{
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    display: grid;
+    place-items: center;
+    margin-top: 15px;
+    transition: 0.5s ease;
+}
+
+.addtocartcontainer div:hover{
+    background-color: black;
+    color: white;
+}
+
+.cartquantity{
+    height: 30px;
+    width: 150px;
+}

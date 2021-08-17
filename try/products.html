@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Car Dealership</title>
+    <link rel="stylesheet" href="./styles/products.css">
+</head>
+<body>
+    <div class="addprocontainer">
+        <div>
+            <i class="fas fa-times exiticon" onclick="addproduct()"></i>
+            <div class="addproform-container">
+                <form class="addproform" method="POST">
+                    <h3>Add New Car</h3>
+                    <table>
+                        <tr>
+                            <td><input class="linputtext" id="aid" type ="text" name ="product_id" placeholder="product_id"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="linputtext" id="aname" type ="text" name ="product_name" placeholder="Product Name"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="linputtext" id="atype" type ="text" name ="product_type" placeholder="Type of Product"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="linputtext" id="aquantity" type ="text" name ="product_quantity" placeholder="Quantity"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="linputtext" id="aprice" type ="text" name ="product_price" placeholder="In Rands"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="linputtext" id="aimage" type ="file" name ="product_image" placeholder="Upload Image" onchange="previewFile()"></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="event.preventDefault(), addtocatalogue()" class="linputsubmit">Add product</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="heading">
+            <span>Dynamic Car Dealership</span>
+            <div class="headingnav">
+                <div id="Home">Home</div>
+                <div id="View-Profile">View Profile</div>
+                <div id="View-Cart">View Cart</div>
+            </div>
+        </div>
+        <div class="productscontent">
+            <div class="newproduct" onclick="addproduct()">
+                <span>
+                    Add New Product
+                </span> 
+            </div>
+            <h1 class="contentheading">Products</h1>
+            <div class="productscontainer">
+            </div>
+        </div>
+    </div>
+    <img src="" alt="image-preview" class="imageup">
+    <script src="./scripts/products.js"></script>
+    <script src="https://kit.fontawesome.com/1e2396cf96.js" crossorigin="anonymous"></script>
+</body>
+</html>

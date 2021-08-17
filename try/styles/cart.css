@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jost&family=Krona+One&family=Poller+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(193, 228, 230);
+    position: relative;
+    font-family: sans-serif;
+    background-image: url(/front.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 10vh 1fr;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    background-color: blue;
+    color: white;
+    font-size: 40px;
+    grid-row: 1;
+}
+
+.heading span{
+    padding-left: 20px;
+}
+
+.headingnav{
+    display: flex;
+    font-size: 15px;
+    padding-right: 2vw;
+}
+
+.headingnav div{
+    padding: 10px 20px;
+    margin-left: 20px;
+    transition: 0.5s ease;
+}
+
+.headingnav div:hover{
+    background-color: white;
+    color: black;
+}
+
+.cartcontainer{
+    margin-top: 10px;
+    padding: 30px 20px;
+}
+
+.cartcontainer h1{
+    margin-bottom: 30px;
+    color: white;
+}
+
+.item{
+    display: flex;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 20px 0;
+    padding: 20px 0;
+    background-color: white;
+}
+
+.item img{
+    width: 10%;
+    height: 10%;
+    margin-right: 20px;
+    align-self: center;
+}
+
+.itemdetails{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.itemdetails div{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.itemdetails div span:first-child{
+    font-size: 25px;
+}
+
+.itemdetails div span:nth-child(2){
+    font-size: 20px;
+}
+
+.removeicon{
+    font-size: 30px;
+    margin-left: 15vw;
+}
+
+.totalcontainer{
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px 30px;
+}
+
+.totalcost{
+    display: flex;
+    align-items: center;
+}
+
+.totalcost span{
+    margin-left: 20px;
+    font-size: 20px;
+    align-self: center;
+}
+
+.checkout{
+    height: 40px;
+    width: 140px;
+    display: grid;
+    place-items: center;
+    border: 1px solid black;
+    transition: 0.5s ease;
+}
+
+.checkout:hover{
+    background: black;
+    color: white;
+}
